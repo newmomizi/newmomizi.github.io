@@ -2,7 +2,7 @@
     <head>
         <title>Hello, World</title>
     </head>
-    
+
     <body>
         <div id="header">
             <h1 class="title">Hello, World!</h1>
@@ -33,7 +33,7 @@
 
     <script language="JavaScript">
         function decode() {
-            var encoded = document.getElementById("bin").innerHTML;
+            var encoded = document.getElementById("bin").value;
             document.getElementById("decoded").innerHTML = decodeURIComponent(encoded) + "<br>(Click to refresh)";
         }
         function getUA() {
