@@ -4,7 +4,7 @@
     </head>
     <script language="JavaScript">
         function decode() {
-            const encoded = document.getElementById("bin").innerHTML;
+            var encoded = document.getElementById("bin").innerHTML;
             document.getElementById("decoded").innerHTML = decodeURIComponent(encoded) + "<br>(Click to refresh)";
         }
         function getUA() {
@@ -21,12 +21,12 @@
             <form name="inputbox">
                 <input type="text" placeholder="Type encoded text here..." id="bin">
             </form>
-            <a href="#" onclick="decode" id="decoded">Decode</a>
+            <a href="" onclick="decode()" id="decoded">Decode</a>
         </div>
 
         <div id="UA">
             <h2 class="subtitle">Your UserAgent</h2>
-            <a href="#" onclick="getUA()" id="userAgent">Get my UA</a>
+            <a href="" onclick="getUA()" id="userAgent">Get my UA</a>
         </div>
 
         <div id="about">
