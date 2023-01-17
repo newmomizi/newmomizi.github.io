@@ -13,12 +13,14 @@
             <input type="text" placeholder="Type encoded text here..." size="150" id="bin"><br>
             <a href="#" onclick="decode()" id="decode-button">Decode</a><br>
             <input type="text" placeholder="Decoded text" size="150" id="decoded" readonly>
+            <input type="button" value="コピー" onclick="copydecoded()">
         </div>
 
         <div id="UA">
             <h2 class="subtitle">Your UserAgent</h2>
             <a href="#" onclick="getUA()" id="UA-button">Get my UA</a><br>
             <input type="text" placeholder="Your UA" size="150" id="userAgent" readonly>
+            <input type="button" value="コピー" onclick="copyUA()">
         </div>
 
         <div id="about">
@@ -37,10 +39,18 @@
             var encoded = document.getElementById("bin").value;
             document.getElementById("decoded").value = decodeURIComponent(encoded);
         }
+        function copydecoded() {
+            document.getElementById("decoded").select();
+            document.execCommand("copy");
+        }
 
         //UserAgent取得処理
         function getUA() {
             document.getElementById("userAgent").value = navigator.userAgent;
+        }
+        function copyUA() {
+            document.getElementById("userAgent").select();
+            document.execCommand("copy");
         }
     </script>
 </html>
