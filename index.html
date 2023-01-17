@@ -10,10 +10,9 @@
 
         <div id="decoder">
             <h2 class="subtitle">URL Decoder</h2>
-            <form name="inputbox">
-                <input type="text" placeholder="Type encoded text here..." id="bin">
-            </form>
-            <a href="#" onclick="decode()" id="decoded">Decode</a>
+            <input type="text" placeholder="Type encoded text here..." id="bin">
+            <a href="#" onclick="decode()" id="decode-button">Decode</a>
+            <input type="text" placeholder="Decoded text" id="decoded">
         </div>
 
         <div id="UA">
@@ -35,7 +34,7 @@
         //URLデコーダー
         function decode() {
             var encoded = document.getElementById("bin").value;
-            document.getElementById("decoded").innerHTML = decodeURIComponent(encoded) + "<br>(Click to refresh)";
+            document.getElementById("decoded").value = decodeURIComponent(encoded);
         }
 
         //UserAgent取得処理
